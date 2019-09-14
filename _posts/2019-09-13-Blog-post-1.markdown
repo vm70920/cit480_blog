@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Blog 1: Dockerfile"
-date:   2019-09-13 18:08:18 -0700
+date:   2019-09-13 18:08:18 -0000
 categories: jekyll update
 ---
 Dockerfile
@@ -13,7 +13,7 @@ Example of the Dockerfile:
 	COPY . /app			#adds files from client’s current directory to /app
 	RUN make /app 		#builds app with command make
 	CMD python /app/app.py	#specified command will run within Docker container
-  
+
 Lab_1 assignment requires to create a base image that included all necessary packages and dependencies. Thus Dockerfile will contain commands to install Apache, mysql-client, php.
 Tips to compose Dockerfile:
 -	To increase readability, split complex RUN statements into multiple lines divided by backslashes.
