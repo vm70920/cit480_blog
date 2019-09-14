@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Blog 0: Jekyll, GitHub, Docker"
-date:   2019-09-06 22:08:18 -0700
+date:   2019-09-06 22:08:18 -0000
 categories: jekyll update
 ---
 Docker
