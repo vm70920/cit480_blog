@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Blog 1: Dockerfile"
+date:   2019-09-13 18:08:18 -0700
+categories: jekyll update
+---
+Dockerfile
+
+The Docker reads instructions from a Dockerfile. Dockerfile allows to build images automatically following contained in the file instructions. Usefulness of Dockerfile is that list of command line instructions will be executed one by one, and many versions of the same image and same configuration can be created following one Dockerfile. Order of commands is important in Docker file, as well as specific format.
+Example of the Dockerfile:
+	FROM Ubuntu 			#creates a layer from Ubuntu image
+	COPY . /app			#adds files from client’s current directory to /app
+	RUN make /app 		#builds app with command make
+	CMD python /app/app.py	#specified command will run within Docker container
+Lab_1 assignment requires to create a base image that included all necessary packages and dependencies. Thus Dockerfile will contain commands to install Apache, mysql-client, php.
+Tips to compose Dockerfile:
+-	To increase readability, split complex RUN statements into multiple lines divided by backslashes.
+-	Avoid RUN apt-get upgrade and RUN dist-upgrade because packages can’t upgrade inside an unprivileged container.
+-	Use RUN apt-get install to update automatically.
+-	Combine RUN apt-get update with apt-install in the same RUN statement.
+-	Best use for ADD is local tar file extraction into image, in other cases COPY is preferable.
+-	Avoid installing extra or unnecessary packages to reduce complexity, file sizes, and build times.
+-	Use .dockerignore file to avoid loading of files in directory that are unnecessary.
+-	Consider design of containers to take responsibility for one aspect of the project.
+ 
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
