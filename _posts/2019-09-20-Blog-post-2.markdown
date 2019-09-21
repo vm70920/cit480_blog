@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Blog 2: Ansible Playbooks"
+date:   2019-09-20 18:00:18 -0000
+categories: jekyll update
+---
+Ansible Playbooks
+
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
