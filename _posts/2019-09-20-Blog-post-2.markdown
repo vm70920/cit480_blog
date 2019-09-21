@@ -7,7 +7,19 @@ categories: jekyll update
 Ansible Playbooks
 
 Ansible is an IT automation tool. Areas of application are configuration management, cloud provisioning, intra-service orchestration, etc.
+
 Ansible architecture allows to connect to nodes and push Ansible modules to them for execution. All connections are done via SSH. After module is executed, it will be removed. Ansible module is like a model of the system desired state. Library of modules can be utilized with multiple terminal programs, with help of text editor, and a version control system for keeping track of changes.
+
+Ansible uses YAML language in the form of Ansible Playbooks. YAML lets to describe automation tasks in a configuration file in a way that approaches plain English. Ansible Playbooks written in human-readable format and describe policies, or set of steps that should be enforced to a remote system.
+
+Features of the playbook language:
+  * Hosts and users - allows to choose machines in infrastructure to target, and what remote user allowed to complete tasks.
+  * Tasks list - list of tasks to execute in specified order, one at a time, at all machines that designated in host section. List runs top to bottom. All hosts that failed to execute task are taken out of the rotation for the rest of the playbook.
+  * Handlers - are tasks that are triggered in response to changes. Executed only once even if notified by multiple tasks. Handler will not run if nothing notifies it.
+
+To avoid writing large Playbooks, features like includes, imports and roles may be used. Imports and includes allows to break large Playbooks into a smaller files. Can be used multiple times within parent playbook. Roles allow to pack tasks together, include variables, handlers, modules and other plugins. Roles can be uploaded and shared via Ansible Galaxy.
+
+There are two modes of operation: dynamic and static. Ansible pre-process all static imports during Playbook parsing time. Dynamic includes are processed during runtime when encountered by task. For static imports, parent tasks will be copied to child tasks within the import. For dynamic includes, task option will not be copied into a child tasks. It will be applied to dynamic tasks only.
 
 
 
