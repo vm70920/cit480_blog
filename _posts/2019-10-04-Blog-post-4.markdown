@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Blog 4: AWS"
+date:   2019-09-27 18:00:18 -0000
+categories: jekyll update
+---
+Amazon Web Services (AWS)
+
+Amazon Web Services is a cloud computing platform providing on-demand "pay as you go" cloud services to companies, governmental organizations, and individual. One of the popular services is Amazon Elastic Compute Cloud (EC2), provides to a client virtual cluster of computers. Such cluster is available for service by client at any time via the internet. EC2 emulates real attributes of computer such as CPU, GPU, HDD/SSD storage, RAM, as well as software: OS (variety of choices), databases, web servers, etc.
+
+Due to the increased demand for Amazon Web Services, Amazon provides academic gateway called AWS Educate. AWS Educate available for students and educators to master cloud-related learning. Students are getting initial credit for hands-on experience, training content, labs, and AWS Educate Job Board. Job Board allows to search and apply for internship and job opportunities from Amazon and other companies around the world. Educators are getting access to open source content, training recourses, and a community of cloud technology adherents.
+
+Starting point is to create standard AWS Account, or AWS Starter Account, then to join AWS Educate (application approval required) AWS Educate available to High School and secondary students age of 14 and older. AWS offers specific amount of credits (equivalent to $100) that can be used as payment for AWS services.
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
