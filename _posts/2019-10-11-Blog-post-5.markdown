@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Blog 4: AWS"
+date:   2019-10-11 18:00:18 -0000
+categories: jekyll update
+---
+Project_0
+
+Goal of the project to have running webserver on AWS EC2. Amazon WS Educate allows to create account and get credits equivalent of $100 that can be used in future as payment for Amazon services. Initial account being created is a root account. Recommended to create additional account for regular user with limited permissions. User able to login into AWS management console to perform needed actions. Setting up Virtual Private Cloud is pretty straightforward. Menu offers to select VPC configuration. There are options for initial infrastructure design. This project requires 3 private and 3 public subnets, along with separate route tables for private and public subnets, thus initial design included one public and one private subnets being chosen. Setup process asks for vpc name, IP address in CIDR notation, as well as availability zone for subnets. Further, user able to create additional subnets by clicking Create subnet button. Upon completion subnets task, user will create route tables and associate subnets with specific route table. Public subnets' route directed to internet gateway, private subnets directed to NAT instance. Following project's requirements, user will create instance based on Amazon Machine Image (Linux os). Instance will be created in network (our current VPC). Dialog window allows to pick desired subnet, as well as to manage auto-assign of public IP (enable for this project), and utilize security group on user choice. Finalizing creation of instance, user asked to either create new key pair, or add existing pair. Also, there is User date section where user can place code to be executed on instance launch. For instance, setting up apache webserver. For this particular step, current user did use SSH connection from separate terminal to running instance on EC2. Upon establishing connection, apache server was installed and started. Test index.html page was used to check connection from browser.
+
+Future purposes of the project requires to acquire domain name. DOmain name was purchased from Namecheap for $1.5 per year. The name of the domain is computing.monster. Namecheap management console allows to setup DNS services. On the webserver side, Route 53 service was installed. There were two A records created for apex domain name: computing.monster, and one more for www.computing.monster. As well as domain servers listed.
+
+Progressing on project, to accommodate communication and organizational tasks Slack and GitHub was used. The body of project was devided into task, and then each task was divided into subtasks. To manage each task assignment and progress GitHub issues were used.  
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
