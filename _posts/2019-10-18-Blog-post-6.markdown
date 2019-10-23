@@ -9,11 +9,12 @@ Project_0
 Technical issues
 One of the technical issues was Connection_Error after setting up AWS load balancer. On previous steps, infrastructure didn't include load balancer, so server was getting requests straight. Public hosted zone #1 on Route53 was holding two A records (one for www.computing.monster and another for computing.monster) that mapped domain names to the web server IP address. After setting up load balancer all requests were coming through load balancer IP address. Solution was to change A records so they would map domain name and load balancer IP address.    
 
-What was learned
+Amazon Route53
+
 Amazon Route53 is cloud based DNS management tool. Main purpose to translate domain names into IP addresses on the way to connect end users and cloud based Internet applications. Route53 processes IPv4 and IPv6 addresses. One of the features is health checks of endpoints. This allows to route traffic to healthy nodes based on their health status. Also, Route53 provides service for Domani name registration. Another feature is visualization of how end users being routed to cloud application.
 For example, primary failover rule (see picture below) allows to route traffic to server IP address if it is healthy, and reroute it to fallback website hosted in S3 bucket if server didn't pass healthy checks.
 
-![Failover rule visualization](\assets\r53_failover_rule_1.png)
+![Failover rule visualization](_site\assets\r53_failover_rule_1.png)
 (picture retrieved from https://media.amazonwebservices.com/blog/2015/r53_failover_rule_1.png)
 
 What to learn
