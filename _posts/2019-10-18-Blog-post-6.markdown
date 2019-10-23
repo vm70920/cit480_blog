@@ -7,7 +7,7 @@ categories: jekyll update
 Project_0
 
 Technical issues
-(content will be updated)
+One of the technical issues was Connection_Error after setting up AWS load balancer. On previous steps, infrastructure didn't include load balancer, so server was getting requests straight. Public hosted zone #1 on Route53 was holding two A records (one for www.computing.monster and another for computing.monster) that mapped domain names to the web server IP address. After setting up load balancer all requests were coming through load balancer IP address. Solution was to change A records so they would map domain name and load balancer IP address.    
 
 What was learned
 (content will be updated)
