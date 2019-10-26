@@ -8,9 +8,9 @@ categories: jekyll update
 Terraform
 
 
-![image](/assets/R53.png)
+![image](/img/R53.png)
 
-
+<img src="/c/Users/User/cit480_jekyll_blog/CIT480_blog/img/R53.png" >
 
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
