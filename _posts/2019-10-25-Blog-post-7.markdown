@@ -11,32 +11,34 @@ Terraform is a open source software with functionality of infrastructure as a co
 
 Terraform by HashiCorp uses own designed configuration language (HCL - HashiCorp Configuration Language). Optionally JSON can be used. The syntax of HCL consists of some basic elements: arguments, blocks, expressions. Blocks represent configuration of object (for example resource). Block has a body that may contain any number of arguments and nested blocks. Arguments assign values to names. Expressions represent values for arguments. Generalized form of block:
 
-  block_type "block_label" "block_label" {
-    #block_body
-    IDENTIFIER = EXPRESSION #argument
-    IDENTIFIER = EXPRESSION #argument
-  }
+    block_type "block_label" "block_label" {
+      #block_body
+      IDENTIFIER = EXPRESSION #argument
+      IDENTIFIER = EXPRESSION #argument
+    }
 
-syntax for comments:
-  # single line comment
-  // single line comment (similar to #)
-  /*...*/ multiple lines comment
+Syntax for comments:
+
+    # single line comment
+    // single line comment (similar to #)
+    /*...*/ multiple lines comment
 
 Terraform available for multiple platforms: macOS, FreeBSD, Linux, OpenBSD, Solaris, Windows. User should choose appropriate package according to host OS.
 
 For macOS users to install Terraform using terminal installation of Homebrew package needed.
 * install Homebrew:
 
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 * install Terraform:
 
-  brew install Terraform
+    brew install Terraform
 
 Terraform is ready for use after installation process is over.
 
 To get help:
 
-  terraform --help
+    terraform --help
 
 Terraform upon appropriate command will execute all files with extension .tf that contained in the current directory.
 
