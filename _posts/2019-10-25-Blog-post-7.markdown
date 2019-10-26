@@ -28,11 +28,11 @@ Terraform available for multiple platforms: macOS, FreeBSD, Linux, OpenBSD, Sola
 For macOS users to install Terraform using terminal installation of Homebrew package needed.
 * install Homebrew:
 
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 * install Terraform:
 
-    brew install Terraform
+      brew install terraform
 
 Terraform is ready for use after installation process is over.
 
@@ -66,10 +66,22 @@ The configuration file example will work on AWS EC2 accounts (on default VPC). C
 
 To store credentials in configuration file (assuming that AWS CLI already installed on host machine) run:
 
-  aws configure
+    aws configure
 
 The AWS CLI will request user input for AWS access key ID and AWS Secret key.
 HashiCorp Terraform recommends never to store credentials into any *.tf files.
+
+After infrastructure configuration file is complete, user will create execution plan by running:
+
+    terraform plan #terraform will plan_execute all *.tf files in current directory
+
+Execution plan allows to check if designed infrastructure matches expectations without actually making any changes in real world.
+
+If execution plan matches desired infrastructure, then user may apply configuration.
+
+    terraform apply #command applies configuration
+
+
 
 
 
