@@ -7,11 +7,14 @@ categories: jekyll update
 
 Terraform
 
+Terraform is a open source software with functionality of infrastructure as a code. Terraform by HashiCorp uses own designed configration language (HCL - HashiCorp Configuration Language). Optionally JSON can be used.
 
-![image](/img/R53.png)
+
+![image]({{site.url}}{{site.baseurl}}/img/Capture.PNG)
+![image]({{site.url}}{{site.baseurl}}/img/R53.png)
 
 <img src="/c/Users/User/cit480_jekyll_blog/CIT480_blog/img/R53.png" >
-
+<img src="img\Capture.PNG">
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
