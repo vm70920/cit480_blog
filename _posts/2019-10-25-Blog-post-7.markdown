@@ -13,8 +13,10 @@ Terraform available for multiple platforms: macOS, FreeBSD, Linux, OpenBSD, Sola
 
 For macOS users to install Terraform using terminal installation of Homebrew package needed.
 * install Homebrew
+
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-* install terrafrom
+* install Terraform
+
     brew install Terraform
 
 Terraform is ready for use after installation process is over.
