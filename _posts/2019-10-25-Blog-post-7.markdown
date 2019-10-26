@@ -10,10 +10,11 @@ categories: jekyll update
 Terraform is a open source software with functionality of infrastructure as a code. Terraform allows to define infrastructure as a code: create resources, manage existing resources, or destroy those ones no longer needed. Terraform works with variety of cloud environments like AWS, Google Cloud, Azure, etc.
 
 Terraform by HashiCorp uses own designed configuration language (HCL - HashiCorp Configuration Language). Optionally JSON can be used. The syntax of HCL consists of some basic elements: arguments, blocks, expressions. Blocks represent configuration of object (for example resource). Block has a body that may contain any number of arguments and nested blocks. Arguments assign values to names. Expressions represent values for arguments. Generalized form of block:
-  <block_type> "<block_label>" "<block_label>" {
+
+  block_type "block_label" "block_label" {
     #block_body
-    <IDENTIFIER> = <EXPRESSION> #argument
-    <IDENTIFIER> = <EXPRESSION> #argument
+    IDENTIFIER = EXPRESSION #argument
+    IDENTIFIER = EXPRESSION #argument
   }
 
 syntax for comments:
