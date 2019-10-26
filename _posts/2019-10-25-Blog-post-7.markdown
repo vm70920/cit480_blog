@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Blog 7: Terraform"
+date:   2019-10-25 18:00:18 -0000
+categories: jekyll update
+---
+
+Terraform
+
+
+![image](/assets/R53.png)
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
