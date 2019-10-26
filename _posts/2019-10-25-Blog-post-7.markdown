@@ -42,18 +42,18 @@ Terraform upon appropriate command will execute all files with extension .tf tha
 
 Simple infrastructure configuration:
 
-  provider "aws" {
-    profile = "default"
-    region = "us-west-1"
-  }
+    provider "aws" {
+      profile = "default"
+      region = "us-west-1"
+    }
 
-  data "aws_ami" "ubuntu" {
-    most_recent = true
-  }
+    data "aws_ami" "ubuntu" {
+      most_recent = true
+    }
 
-  resource "aws_instance" "web_server_apache2" {
-    ami = "${data.aws_ami.ubuntu.id}"
-    instance_type = "t2.micro"
+    resource "aws_instance" "web_server_apache2" {
+      ami = "${data.aws_ami.ubuntu.id}"
+      instance_type = "t2.micro"
 
     tags = {
       Name = "Apache2_web_server"
