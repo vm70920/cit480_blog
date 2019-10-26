@@ -7,14 +7,19 @@ categories: jekyll update
 
 Terraform
 
-Terraform is a open source software with functionality of infrastructure as a code. Terraform by HashiCorp uses own designed configration language (HCL - HashiCorp Configuration Language). Optionally JSON can be used.
+Terraform is a open source software with functionality of infrastructure as a code. Terraform by HashiCorp uses own designed configration language (HCL - HashiCorp Configuration Language). Optionally JSON can be used. Terraform allows to define infrastructure as a code: create resources, manage existing resources, or destroy those ones no longer needed. Terraform works with variety of cloud environments like AWS, Google Cloud, Azure, etc.
+
+Terraform available for multiple platforms: macOS, FreeBSD, Linux, OpenBSD, Solaris, Windows. User should choose appropriate package according to host OS.
+
+For macOS users to install Terraform using terminal installation of Homebrew package needed.
+* install Homebrew
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+* install terrafrom
+    brew install Terraform
+
+Terraform is ready for use after installation process is over.
 
 
-![image]({{site.url}}{{site.baseurl}}/CIT480_blog/img/Capture.PNG)
-![image]({{site.url}}{{site.baseurl}}/CIT480_blog/img/R53.png)
-
-<img src="/c/Users/User/cit480_jekyll_blog/CIT480_blog/img/R53.png" >
-<img src="img\Capture.PNG">
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
