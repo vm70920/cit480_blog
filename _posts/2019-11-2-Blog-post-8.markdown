@@ -11,6 +11,8 @@ Network address translation (NAT) is a virtual private cloud networking componen
 
 AWS provides two option of NAT: NAT Gateway and NAT instance. NAT Gateway provides better availability, higher bandwidth (scale up to a 45Gbps), and it is managed by AWS (does not required administrative maintenance). NAT instance is cheaper, requires maintenance, and bandwidth limited by the instance type.
 
+<h5>NAT Gateway</h5>
+
 To create NAT Gateway using AWS CLI:
 
     aws ec2 create-nat-gateway --subnet-id public-subnet-1 --allocation-id eipalloc-37fc1a52
@@ -104,6 +106,21 @@ To delete NAT Gateway:
     aws ec2 delete-nat-gateway --nat-gateway-id nat-nat-05dba92075d71c445
 
 Upon deletion of NAT Gateway, elastic IP being disassociated, however elastic IP not released from user's account. Deleting NAT Gsteway does not affect any routes in route table.
+
+After creation of NAT Gteway and updating route tables, ping can be made from private instances to test internet connection.
+Here is a link to variety of tools to troubleshooting NAT Gateway:
+
+https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-troubleshooting.html
+
+
+<h5>NAT instance</h5>
+
+Allows to instances from private network to access the Internet, but prevent receiving by instnces any connections from the Internet. AWS provides AMIs configured specifically for NAT instances. AMI can be identified by amzn-ami-vpc-nat string in their names. Initial configuration of NAT instance upon launching AMI includes IPv4 forwarding enabled, and ICMP redirects are deisabled in /etc/sysctl.d/10-nat-settings.conf. NAT instance depends on limits of instance type for the region. To launch NAT instance:
+
+    aws ec2 describe-image --filter Name="nat", Values="amazon" --filter Name="name", Vlaues="amzn-ami-vpc-nat*"
+
+
+
 
 
 
