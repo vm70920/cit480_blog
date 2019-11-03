@@ -16,6 +16,7 @@ To create NAT Gateway using AWS CLI:
     aws ec2 create-nat-gateway --subnet-id public-subnet-1 --allocation-id eipalloc-37fc1a52
 
 Output:
+
     {
       "NatGateway": {
         "NatGatewayAddresses": [
