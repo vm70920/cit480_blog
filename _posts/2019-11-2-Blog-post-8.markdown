@@ -24,17 +24,17 @@ Output:
             "AllocationId": "eipalloc-37fc1a52"
           }
         ],
-        "VpcId": "vpc-1122aabb",
+        "VpcId": "vpc-09e287ce81b5ffb91",
         "State": "pending",
-        "NatGatewayId": "nat-08d48af2a8e83edfd",
-        "SubnetId": "subnet-1a2b3c4d",
-        "CreateTime": "2015-12-17T12:45:26.732Z"
+        "NatGatewayId": "nat-05dba92075d71c445",
+        "SubnetId": "public-subnet-1",
+        "CreateTime": "2019-11-1T12:45:26.732Z"
       }
     }
 
 To help manage AWS resources assignment of own metadata in the form of "tags" will help. Just for precautins, tag keys and their values will be returned by various API calls. Implementation of "deny access" to DescribeTags won't automatically apply deny access to tags by other APIs calls. Recomended by AWS not to include sensitive data in tags. Each AWS resource may have up to a 50 tags. Tags are implemented in the for of key=string, value=string. Tag keys are unique for each AWS resource.
 
-    aws ec2 create-tags --resources ami-21jh24g4jh4 i-5j336kh45345 --tags Key=webserver, Value=Apache2_web_server
+    aws ec2 create-tags --resources ami-21jh24g4jh4 i-0753dad7e4070Obce --tags Key=webserver, Value=Apache2_web_server
 
 If special characterd must be used in the tags, then they need to be escaped. For Windows users element with special characters should be surrounded with double qouts (") and preceded with backslash (\):
 
@@ -59,42 +59,42 @@ To describe NAT Gateway:
             {
               "PublicIp": "198.11.222.333",
               "NetworkInterfaceId": "eni-9dec76cd",
-              "AllocationId": "eipalloc-89c620ec",
+              "AllocationId": "eipalloc-37fc1a52",
               "PrivateIp": "10.0.0.149"
             }
           ],
-          "VpcId": "vpc-1a2b3c4d",
+          "VpcId": "vpc-09e287ce81b5ffb91",
           "Tags": [
                   {
-                      "Value": "IT",
-                      "Key": "Department"
+                      "Value": "webserver1",
+                      "Key": "apache2"
                   }
           ],
           "State": "available",
           "NatGatewayId": "nat-05dba92075d71c445",
           "SubnetId": "subnet-847e4dc2",
-          "CreateTime": "2015-12-01T12:26:55.983Z"
+          "CreateTime": "2019-11-1T12:35:26.556Z"
         },
         {
           "NatGatewayAddresses": [
             {
-              "PublicIp": "1.2.3.12",
+              "PublicIp": "198.11.128.128",
               "NetworkInterfaceId": "eni-71ec7621",
-              "AllocationId": "eipalloc-5d42583f",
+              "AllocationId": "eipalloc-37fc1a52",
               "PrivateIp": "10.0.0.77"
             }
           ],
-          "VpcId": "vpc-11aa22bb",
+          "VpcId": "nat-05dba92075d71c445",
           "Tags": [
                   {
-                      "Value": "Finance",
-                      "Key": "Department"
+                      "Value": "webserver2",
+                      "Key": "apache2"
                   }
           ],
           "State": "available",
-          "NatGatewayId": "nat-0a93acc57881d4199",
-          "SubnetId": "subnet-7f7e4d39",
-          "CreateTime": "2015-12-01T12:09:22.040Z"
+          "NatGatewayId": "nat-0a93a455645645688",
+          "SubnetId": "public-subnet-2",
+          "CreateTime": "2019-11-1T12:41:26.128Z"
         }
       ]
     }
