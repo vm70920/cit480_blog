@@ -11,7 +11,7 @@ Network address translation (NAT) is a virtual private cloud networking componen
 
 AWS provides two option of NAT: NAT Gateway and NAT instance. NAT Gateway provides better availability, higher bandwidth (scale up to a 45Gbps), and it is managed by AWS (does not required administrative maintenance). NAT instance is cheaper, requires maintenance, and bandwidth limited by the instance type.
 
-<h5>NAT Gateway</h5>
+<h3>NAT Gateway</h3>
 
 To create NAT Gateway using AWS CLI:
 
@@ -113,7 +113,7 @@ Here is a link to variety of tools to troubleshooting NAT Gateway:
 https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-troubleshooting.html
 
 
-<h5>NAT instance</h5>
+<h3>NAT instance</h3>
 
 Allows to instances from private network to access the Internet, but prevent receiving by instnces any connections from the Internet. AWS provides AMIs configured specifically for NAT instances. AMI can be identified by amzn-ami-vpc-nat string in their names. Initial configuration of NAT instance upon launching AMI includes IPv4 forwarding enabled, and ICMP redirects are deisabled in /etc/sysctl.d/10-nat-settings.conf. NAT instance depends on limits of instance type for the region. To launch NAT instance:
 
