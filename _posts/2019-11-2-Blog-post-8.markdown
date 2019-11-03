@@ -5,7 +5,7 @@ date:   2019-11-02 18:00:18 -0000
 categories: jekyll update
 ---
 
-<h3>AWS VPC networking components NAT</h3>
+<h3>AWS VPC networking components: NAT</h3>
 
 Network address translation (NAT) is a virtual private cloud networking component designed to allow private subnet to connect to the Internet. Primary goal of NAT to allow outbound connection but eliminate incoming connections. Instances in private subnets are sending requests via NAT, and then sends responses back to instances in private subnets. AWS NAT component performs two roles: network address translation and port address translation.
 
@@ -34,19 +34,19 @@ Output:
       }
     }
 
-To help manage AWS resources assignment of own metadata in the form of "tags" will help. Just for precautins, tag keys and their values will be returned by various API calls. Implementation of "deny access" to DescribeTags won't automatically apply deny access to tags by other APIs calls. Recomended by AWS not to include sensitive data in tags. Each AWS resource may have up to a 50 tags. Tags are implemented in the for of key=string, value=string. Tag keys are unique for each AWS resource.
+To help manage AWS resources assignment of own metadata in the form of "tags" will help. Just for precautions, tag keys and their values will be returned by various API calls. Implementation of "deny access" to DescribeTags won't automatically apply deny access to tags by other APIs calls. Recommended by AWS not to include sensitive data in tags. Each AWS resource may have up to a 50 tags. Tags are implemented in the for of key=string, value=string. Tag keys are unique for each AWS resource.
 
     aws ec2 create-tags --resources ami-21jh24g4jh4 i-0753dad7e4070Obce --tags Key=webserver, Value=Apache2_web_server
 
-If special characterd must be used in the tags, then they need to be escaped. For Windows users element with special characters should be surrounded with double qouts (") and preceded with backslash (\):
+If special character must be used in the tags, then they need to be escaped. For Windows users element with special characters should be surrounded with double quotes (") and preceded with backslash (\):
 
     --tags Key=\"[Group]\", Value=users
 
-For Windows PoserShell users element with special characters should be surrounded by quotes ("), preceded with backslash (\), and entire key:value element should be wraped with single quotes('):
+For Windows PoserShell users element with special characters should be surrounded by quotes ("), preceded with backslash (\), and entire key:value element should be wrapped with single quotes('):
 
     --tags 'Key=\"[Group]\", Value=users'
 
-For Linux or OS X users, the elements with spechial characters sould be surrounded with double quotes ("), and entire key:value structure should be surrounded with single quotes ('):
+For Linux or OS X users, the elements with specials characters should be surrounded with double quotes ("), and entire key:value structure should be surrounded with single quotes ('):
 
     --tags 'Key="[Group]", Value=users'
 
@@ -105,9 +105,9 @@ To delete NAT Gateway:
 
     aws ec2 delete-nat-gateway --nat-gateway-id nat-nat-05dba92075d71c445
 
-Upon deletion of NAT Gateway, elastic IP being disassociated, however elastic IP not released from user's account. Deleting NAT Gsteway does not affect any routes in route table.
+Upon deletion of NAT Gateway, elastic IP being disassociated, however elastic IP not released from user's account. Deleting NAT Gateway does not affect any routes in route table.
 
-After creation of NAT Gteway and updating route tables, ping can be made from private instances to test internet connection.
+After creation of NAT Gateway and updating route tables, ping can be made from private instances to test internet connection.
 Here is a link to variety of tools to troubleshooting NAT Gateway:
 
 https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-troubleshooting.html
@@ -115,9 +115,9 @@ https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-troubleshooting.htm
 
 <h3>NAT instance</h3>
 
-Allows to instances from private network to access the Internet, but prevent receiving by instnces any connections from the Internet. AWS provides AMIs configured specifically for NAT instances. AMI can be identified by amzn-ami-vpc-nat string in their names. Initial configuration of NAT instance upon launching AMI includes IPv4 forwarding enabled, and ICMP redirects are deisabled in /etc/sysctl.d/10-nat-settings.conf. NAT instance depends on limits of instance type for the region. To launch NAT instance:
+Allows to instances from private network to access the Internet, but prevent receiving by instances any connections from the Internet. AWS provides AMIs configured specifically for NAT instances. AMI can be identified by amzn-ami-vpc-nat string in their names. Initial configuration of NAT instance upon launching AMI includes IPv4 forwarding enabled, and ICMP redirects are disabled in /etc/sysctl.d/10-nat-settings.conf. NAT instance depends on limits of instance type for the region. To launch NAT instance:
 
-    aws ec2 describe-image --filter Name="nat", Values="amazon" --filter Name="name", Vlaues="amzn-ami-vpc-nat*"
+    aws ec2 describe-image --filter Name="nat", Values="amazon" --filter Name="name", Values="amzn-ami-vpc-nat*"
 
 
 
