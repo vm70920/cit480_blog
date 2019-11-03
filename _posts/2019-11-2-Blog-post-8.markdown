@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "Blog 8: AWS NAT"
+date:   2019-11-02 18:00:18 -0000
+categories: jekyll update
+---
+
+<h3>AWS VPC networking components NAT</h3>
+
+Network address translation (NAT) is a virtual private cloud networking component designed to allow private subnet to connect to the Internet. Primary goal of NAT to allow outbound connection but eliminate incoming connections. Instances in private subnets are sending requests via NAT, and then sends responses back to instances in private subnets. AWS NAT component performs two roles: network address translation and port address translation.
+
+AWS provides two option of NAT: NAT Gateway and NAT instance. NAT Gateway provides better availability, higher bandwidth (scale up to a 45Gbps), and it is managed by AWS (does not required administrative maintenance). NAT instance is cheaper, requires maintenance, and bandwidth limited by the instance type.
+
+To create NAT Gateway using AWS CLI:
+
+    aws ec2 create-nat-gateway --subnet-id public-subnet-1 --allocation-id eipalloc-37fc1a52
+
+Output:
+    {
+      "NatGateway": {
+        "NatGatewayAddresses": [
+          {
+            "AllocationId": "eipalloc-37fc1a52"
+          }
+        ],
+        "VpcId": "vpc-1122aabb",
+        "State": "pending",
+        "NatGatewayId": "nat-08d48af2a8e83edfd",
+        "SubnetId": "subnet-1a2b3c4d",
+        "CreateTime": "2015-12-17T12:45:26.732Z"
+      }
+    }
+
+
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
