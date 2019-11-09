@@ -44,7 +44,7 @@ Values that can be changed:
  - ```socket```: location of the socket files
  - ```pidfile```: location of the PID files
 
- <h2>Configure jail.local settings
+ <h2>Configure jail.local settings</h2>
 
  The configuration file ```jail.conf``` enables Fail2ban for SSH by default on Ubuntu. If customization will be applied to jail configuration, it is recommended to create a copy named ```jail.local``` of default config file.
 
