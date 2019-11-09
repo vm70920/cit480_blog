@@ -9,7 +9,7 @@ categories: jekyll update
 
 Fail2ban is a log parsing software that protects servers from brute-force attack by catching symptoms of automated attack. It carries intrusion prevention functionality. Compatible with POSIX systems with preinstalled local firewall or packet-control system. Fail2ban has no intention to replace local firewalls. Operates with both IPv4 and IPv6 addresses. Software operates by reading log files in /var/log directory and runs scripts based on specific settings. Most common task is to block selected IP addresses of hosts that trying to breach security. For instance, it will block IP address of the host that trying to make multiple unsuccessful login attempts, assume performing dictionary attack. Fail2ban configured to unban suspicious hosts after some time. Administrator may specify time frame that banned hosts will be blocked. In case if suspicious host keep coming back, longer ban may be applied. Functionality of Fail2ban allows to perform actions in response to attack: may send email notification according to mail list, may update tables and rules of local firewall software, etc.
 
-To install Fail2ban on Ubuntu:
+<h2>To install Fail2ban on Ubuntu:</h2>
 
   1.Check for system update
 
@@ -27,11 +27,13 @@ To install Fail2ban on Ubuntu:
 
     ufw allow ssh
 
-    enable firewall:
+  enable firewall:
 
     ufw enable
 
+<h2>Configure Fail2ban</h2>
 
+Firstly, Fail2ban reads '''.conf''', then
 
 
 
