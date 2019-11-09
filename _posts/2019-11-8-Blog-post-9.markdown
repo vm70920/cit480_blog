@@ -33,7 +33,18 @@ Fail2ban is a log parsing software that protects servers from brute-force attack
 
 <h2>Configure Fail2ban</h2>
 
-Firstly, Fail2ban reads ```.conf```, then
+Firstly, Fail2ban reads ```.conf``` configuration file, then ```.local``` files override any settings, thus all configuration changes done in ```.local``` files. Default configuration profile contained in ```fail2ban.conf```, in case if customization to settings required, then it is better to make changes in separate file named ```failban.local``` (this file will override ```fail2ban.conf```). To make a copy of current ```.conf``` and rename it:
+
+    cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
+
+Values that can be changed:
+
+ - ```loglevel```: level of log detailes may be set to 1=error, 2=warn, 3=info, 4=debug
+ - ```logtarget```: specifies file to log actions. Default value of /var/log/fail2ban.log file will be logged in specified file
+ - ```socket```: location of the socket files
+ - ```pidfile```: location of the PID files
+
+ 
 
 
 
