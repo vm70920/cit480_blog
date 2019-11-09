@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Blog 9: Fail2ban"
+title:  "Blog 9: Fail2ban on Ubuntu"
 date:   2019-11-08 18:00:18 -0000
 categories: jekyll update
 ---
 
-<h2>Fail2ban</h2>
+<h2>Fail2ban on Ubuntu</h2>
 
 Fail2ban is a log parsing software that protects servers from brute-force attack by catching symptoms of automated attack. It carries intrusion prevention functionality. Compatible with POSIX systems with preinstalled local firewall or packet-control system. Fail2ban has no intention to replace local firewalls. Operates with both IPv4 and IPv6 addresses. Software operates by reading log files in /var/log directory and runs scripts based on specific settings. Most common task is to block selected IP addresses of hosts that trying to breach security. For instance, it will block IP address of the host that trying to make multiple unsuccessful login attempts, assume performing dictionary attack. Fail2ban configured to unban suspicious hosts after some time. Administrator may specify time frame that banned hosts will be blocked. In case if suspicious host keep coming back, longer ban may be applied. Functionality of Fail2ban allows to perform actions in response to attack: may send email notification according to mail list, may update tables and rules of local firewall software, etc.
 
@@ -44,7 +44,19 @@ Values that can be changed:
  - ```socket```: location of the socket files
  - ```pidfile```: location of the PID files
 
- 
+ <h2>Configure jail.local settings
+
+ The configuration file ```jail.conf``` enables Fail2ban for SSH by default on Ubuntu. If customization will be applied to jail configuration, it is recommended to create a copy named ```jail.local``` of default config file.
+
+<h3>Whitelist IP</h3>
+To ignore some specific IPs that we are confident, such IPs should be added to ```ingnorip``` line.
+
+    [DEFAULT]
+    #"ignoreip" can be an IP address, a CIDR mask or a DNS host. Fail2ban will not ban a hosts
+    #which matches an address in this list. Several addresses can be defined using space #separator
+    ignoreip = 127.0.0.1/8 124.64.52.74
+
+to be continued
 
 
 
