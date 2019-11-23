@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Blog 11: Infrastructure monitoring"
+date:   2019-11-22 18:00:18 -0000
+categories: jekyll update
+---
+
+<h2>Monitoring</h2>
+
+Content under construction
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
