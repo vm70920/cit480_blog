@@ -23,7 +23,7 @@ email: viktarlg@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The purpose of this blog to descibe weekly activities.
 baseurl: "cit480_blog" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://vm70920.github.io/cit480_blog/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
