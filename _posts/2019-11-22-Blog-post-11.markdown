@@ -5,9 +5,17 @@ date:   2019-11-22 18:00:18 -0000
 categories: jekyll update
 ---
 
-<h2>Monitoring</h2>
+<h2>Infrastructure Monitoring</h2>
 
-Content under construction
+<h3>Option 1: ELK Stack</h3>
+
+The ELK stack includes: Elasticsearch, Logstash, Kibana. The stack is open source. Helpful to manage large amounts of logged data. The ELK has graphical web interface. The whole stack developed by one developer Elastic, which implies better inter component interactions. Installation is very easy, specifically on Ubuntu systems. Recently one more component Beats was added to a stack. Combination of four components called Elastic Stack.
+
+All three components works as a single system. Elasticsearch has functionality of search and analytics engine. Logstash component is processing data pipeline on server side. It gets data from multiple sources simultaneously, then transforms it, and sends to Elasticsearch. Last component Kibana visualizes data with graphs and charts in Elasticsearch.
+
+<h3>Option 2: Graylog</h3>
+
+The Graylog is a platform for log management for structured and unstructured data, and includes debugging applications. 
 
 
 
