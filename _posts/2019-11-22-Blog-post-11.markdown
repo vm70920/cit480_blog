@@ -24,6 +24,10 @@ Architectural specifications:
   - Graylog web interfaces nodes can be small due to their functionality of waiting HTTP answers from clients
   - Backup needed for messages stored only in Elasticsearch, because in case of data loss at Elasticsearch messages will be lost
 
+<h3>Option 3: Prometheus</h3>
+
+
+
 
 
 
