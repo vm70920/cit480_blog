@@ -15,7 +15,14 @@ All three components works as a single system. Elasticsearch has functionality o
 
 <h3>Option 2: Graylog</h3>
 
-The Graylog is a platform for log management for structured and unstructured data, and includes debugging applications. 
+The Graylog is an open source platform for log management for structured and unstructured data, and includes debugging applications. Components of Graylog are: Elasticsearch, MongoDB, Graylog. Graylog composed of main server (graylog server) that receives the data from mutiple servers (Elasticsearch nodes-clients), web interface for data visualization.
+
+Architectural specifications:
+  - Graylog server CPU power matters a logtarget
+  - Clients need as much as possible of RAM, as well very fast disks due to the dependability on I/O speed.
+  - Database MongoDB can be fairly small becuse used only to store configuration and dead letter messages
+  - Graylog web interfaces nodes can be small due to their functionality of waiting HTTP answers from clients
+  - Backup needed for messages stored only in Elasticsearch, because in case of data loss at Elasticsearch messages will be lost
 
 
 
