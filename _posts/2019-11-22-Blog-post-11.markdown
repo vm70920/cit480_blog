@@ -26,7 +26,12 @@ Architectural specifications:
 
 <h3>Option 3: Prometheus</h3>
 
-
+Prometheus used for event monitoring and alerting. It is open-source software. Prometheus records real time metrics in a series database. It is using HTTP pull model, flexible queries, and provides real-time alerting. Typical Prometheus monitoring platform includes following tools:
+  - Prometheus - centralized point of management and storage facility for metrics
+  - Exporters - run on multiple hosts to export their metrics
+  - Alertmanager - triggers alerts based on metrics
+  - Grafana - information visualization and produce dashboards
+  - PromQL - query language to perform alerts and compose dashboards
 
 
 

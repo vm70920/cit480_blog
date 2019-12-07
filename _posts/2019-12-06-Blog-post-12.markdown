@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Blog 12: Grafana"
+date:   2019-12-06 18:00:18 -0000
+categories: jekyll update
+---
+
+<h2>Grafana</h2>
+
+
+
+
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
