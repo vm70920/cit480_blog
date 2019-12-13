@@ -9,6 +9,22 @@ categories: jekyll update
 
 Grafana is an open source metric analytics and visualization tool. It is mostly used for visualizing time series data for infrastructure and application analytics. AAlso it used in other areas including industrial sensors, home automation, weather, and process control.
 
+<h3>Installing Grafana on Debian / Ubuntu</h3>
+
+    wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.2.0_amd64.deb
+    sudo apt-get install -y adduser libfontconfig
+    sudo dpkg -i grafana_4.2.0_amd64.deb
+
+Package details
+    - Installs binary to /usr/sbin/grafana-server
+    - Installs Init.d script to /etc/init.d/grafana-server
+    - Creates default file (environment vars) to /etc/default/grafana-server
+    - Installs configuration file to /etc/grafana/grafana.ini
+    - Installs systemd service (if systemd is available) name grafana-server.service
+    - The default configuration sets the log file at /var/log/grafana/grafana.log
+    - The default configuration specifies an sqlite3 db at /var/lib/grafana/grafana.db
+
+
 <h2>Creating Grafana dashboard</h2>
 
 Before creating a dashboard, we have to add a data source.
