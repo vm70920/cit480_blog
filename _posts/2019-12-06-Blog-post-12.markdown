@@ -16,13 +16,13 @@ Grafana is an open source metric analytics and visualization tool. It is mostly 
     sudo dpkg -i grafana_4.2.0_amd64.deb
 
 Package details
-    - Installs binary to /usr/sbin/grafana-server
-    - Installs Init.d script to /etc/init.d/grafana-server
-    - Creates default file (environment vars) to /etc/default/grafana-server
-    - Installs configuration file to /etc/grafana/grafana.ini
-    - Installs systemd service (if systemd is available) name grafana-server.service
-    - The default configuration sets the log file at /var/log/grafana/grafana.log
-    - The default configuration specifies an sqlite3 db at /var/lib/grafana/grafana.db
+  - Installs binary to /usr/sbin/grafana-server
+  - Installs Init.d script to /etc/init.d/grafana-server
+  - Creates default file (environment vars) to /etc/default/grafana-server
+  - Installs configuration file to /etc/grafana/grafana.ini
+  - Installs systemd service (if systemd is available) name grafana-server.service
+  - The default configuration sets the log file at /var/log/grafana/grafana.log
+  - The default configuration specifies an sqlite3 db at /var/lib/grafana/grafana.db
 
 
 <h2>Creating Grafana dashboard</h2>
