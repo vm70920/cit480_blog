@@ -7,15 +7,15 @@ categories: jekyll update
 
 <h2>Grafana</h2>
 
-Grafana is an open source metric analytics & visualization suite. It is most commonly used for visualizing time series data for infrastructure and application analytics but many use it in other domains including industrial sensors, home automation, weather, and process control.
+Grafana is an open source metric analytics and visualization tool. It is mostly used for visualizing time series data for infrastructure and application analytics. AAlso it used in other areas including industrial sensors, home automation, weather, and process control.
 
 <h2>Creating Grafana dashboard</h2>
 
 Before creating a dashboard, we have to add a data source.
 
-  - So first click on Data sources in the left menu and then on Add new.
+  - First click on Data sources in the left menu and then on Add new.
 
-  - Name can be something like influxdb and the type should be set to InfluxDB 0.9. In this example, the url for the Http settings is http://localhost:8086.
+  - Name can be something like project_db and the type should be set to InfluxDB 0.9. In this example, the url for the Http settings is http://localhost:9090 if using Prometheus.
 
   - Note that the port is not the same as the one of the web interface! Database name corresponds to the one earlier chosen, e.g. example. If not changed, username and password are root.
 
