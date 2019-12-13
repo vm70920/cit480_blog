@@ -7,6 +7,33 @@ categories: jekyll update
 
 <h2>Grafana</h2>
 
+Grafana is an open source metric analytics & visualization suite. It is most commonly used for visualizing time series data for infrastructure and application analytics but many use it in other domains including industrial sensors, home automation, weather, and process control.
+
+<h2>Creating Grafana dashboard</h2>
+
+Before creating a dashboard, we have to add a data source.
+
+  - So first click on Data sources in the left menu and then on Add new.
+
+  - Name can be something like influxdb and the type should be set to InfluxDB 0.9. In this example, the url for the Http settings is http://localhost:8086.
+
+  - Note that the port is not the same as the one of the web interface! Database name corresponds to the one earlier chosen, e.g. example. If not changed, username and password are root.
+
+  - Click on Test connection to see everything is working and then on Save.
+
+  - Next, back at the front page, click Home in the left-upper corner and then on New.
+
+  - Now this might be a bit counter-intuitive, but to add a new dashboard you have to hover and click over the little green box on the left side and then, for example, choose: Add panel and Graph.
+
+  - Click on the title of the new graph and select Edit.
+
+  - In the graph settings in Metrics choose influxdb as data source in the lower-right corner.
+
+  - Create a query by selecting your aggregated data. Click on select measurement which is located beside FROM. In the dropdown menu should appear a list of "tables" in your database, e.g. the table named localhost. If no suggestions comes up, your connection to InfluxDB might be broken or no data has been aggregated yet.
+
+  - Beside the bold text SELECT click on value and choose for example the measurement data uptime.
+
+  - To save changes, click Back to dashboard, then the floppy disc icon.
 
 
 
