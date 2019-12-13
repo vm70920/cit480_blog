@@ -24,8 +24,18 @@ Package details
   - The default configuration sets the log file at /var/log/grafana/grafana.log
   - The default configuration specifies an sqlite3 db at /var/lib/grafana/grafana.db
 
+<h3>Start the server (systemd)</h3>
+  To start the server:
 
-<h2>Creating Grafana dashboard</h2>
+    systemctl daemon-reload
+    systemctl start grafana-server
+    systemctl status grafana-server
+
+Enable the systemd service so that Grafana starts at boot.
+
+    sudo systemctl enable grafana-server.service
+
+<h3>Creating Grafana dashboard</h3>
 
 Before creating a dashboard, we have to add a data source.
 
